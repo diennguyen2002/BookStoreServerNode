@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <select name="category">
+            <% categories.forEach(cat=>{ %>
+                <option value="<%- cat._id %>">
+                    <%- cat.name %>
+                </option>
+            <%})%>
+        </select>
+        <br>
+        <input type="text" name="txtName" placeholder="Book's name">
+        <br>
+        <input type="file" name="fileImage">
+        <br>
+        <input type="text" name="txtFile" placeholder="File name">
+        <br><br>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
